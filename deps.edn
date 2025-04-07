@@ -1,0 +1,13 @@
+{:paths   ["dev" "src" #_#_#_"notebooks" "resources" "resources-public"]
+ :deps    {io.github.nextjournal/clerk {:mvn/version "0.17.1102"}
+nubank/matcher-combinators    {:mvn/version "3.9.1"}
+metosin/ring-http-response {:mvn/version "0.9.5"}
+           org.clojure/clojure         {:mvn/version "1.12.0"}
+           org.slf4j/slf4j-nop      {:mvn/version "RELEASE"}
+           }
+ :aliases {:outdated {:deps {com.github.liquidz/antq {:mvn/version "RELEASE"}
+                             org.slf4j/slf4j-nop {:mvn/version "RELEASE"}}
+                      :main-opts ["-m" "antq.core"]}
+           :test {:main-opts   ["-m" "kaocha.runner"]
+                  :extra-deps  {lambdaisland/kaocha           {:mvn/version "1.91.1392"}
+                                lambdaisland/kaocha-junit-xml {:mvn/version "1.17.101"}}}}}
